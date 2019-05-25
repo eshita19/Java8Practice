@@ -8,7 +8,7 @@
    * It doesn't modify the main datasource. Terminal result of a stream is - Another stream or a result(count, min, max)
       #### Stream Interfaces
       * Defined in java.util.stream.
-      * interface BaseStram<T, S extends BaseStream <T,S>> ( Extends AutoCloseable)
+      * **interface BaseStram<T, S extends BaseStream <T,S>>  ( Extends AutoCloseable)
         * T - Type of elements in the stream
         * S - Stream
         * Main methods:
@@ -20,6 +20,8 @@
           * S sequential() - Returns a squerntial stream.
           * SplitIterator<T> splitIterator - Obtains a SplitIterator to stream (Terminal operation).
           * S unorderd() - Returns an unorderd stream based on the invoking stream.
+  
+     * **interface Stream<T>
   
   
           
