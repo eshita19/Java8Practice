@@ -8,7 +8,7 @@
    * It doesn't modify the main datasource. Terminal result of a stream is - Another stream or a result(count, min, max)
       #### Stream Interfaces
       * Defined in java.util.stream.
-      * **interface BaseStram<T, S extends BaseStream <T,S>>**   ( Extends AutoCloseable)
+      * **interface BaseStream<T, S extends BaseStream <T,S>>**   ( Extends AutoCloseable)
         * T - Type of elements in the stream
         * S - Stream
         * Main methods:
@@ -35,6 +35,8 @@
        * T reduce(T identityval, BinaryOperator<T> accumlator) - Returns a result based on the elements in invoking stream.
        * Stream<T> sorted() - Returns new stream with elements sorted in natural order.
        * Object[] toArray() - Creates an array of elements from stream.
+
+   * **Terminal operation vs intermediate operations** : Terminal operations consumes stream and produces a result(count, sorted, toArray). Intermediate operations consumes a stream and produces a new stream(filter, map, reduce)
   
   
           
