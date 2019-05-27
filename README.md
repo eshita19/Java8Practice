@@ -37,6 +37,7 @@
        * Object[] toArray() - Creates an array of elements from stream.
 
    * **Terminal operation vs intermediate operations** : Terminal operations consumes stream and produces a result(count, sorted, toArray). Intermediate operations consumes a stream and produces a new stream(filter, map, reduce)
+   * **Reduction operations**: These operations reduces the stream data to a single value(count, min, max) 
   
   
           
