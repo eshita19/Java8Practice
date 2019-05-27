@@ -40,6 +40,7 @@
    * **Reduction operations**: These operations reduces the stream data to a single value(count, min, max) 
       Optional<T> reduce(BinaryOperator<T> accumlator)
       T reduce(T identityVal, BinaryOperator<T> accumlator)
+   * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
           
