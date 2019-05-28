@@ -1,6 +1,7 @@
 # Java8 Features
 
 ## 1. Interface Enhancement
+    * **Default Methods** : Interface can have implementation of methods declared as default. If interface needs to be extended without breaking classes implementing it, default methods is good option.
 ## 2. Lambda Expression
 ## 3. Streams:
    * Operates on a data source - Arrays or Collection.
@@ -37,6 +38,10 @@
        * Object[] toArray() - Creates an array of elements from stream.
 
    * **Terminal operation vs intermediate operations** : Terminal operations consumes stream and produces a result(count, sorted, toArray). Intermediate operations consumes a stream and produces a new stream(filter, map, reduce)
+   * **Reduction operations**: These operations reduces the stream data to a single value(count, min, max) 
+      Optional<T> reduce(BinaryOperator<T> accumlator)
+      T reduce(T identityVal, BinaryOperator<T> accumlator)
+   * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
           
