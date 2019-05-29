@@ -4,6 +4,8 @@
    * **Default Methods** :
       * Interface can have implementation of methods declared as default.
       * If interface needs to be extended without breaking classes implementing it, default methods is good option.
+   * **Static Methods** :
+      * Interface can have static methods. It can be called directly: MyInterface.aMethod()
 ## 2. Lambda Expression
 ## 3. Streams:
    * Operates on a data source - Arrays or Collection.
