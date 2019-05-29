@@ -1,6 +1,7 @@
 # Java8 Features
 
-## 1. Interface Enhancement
+## 1. Interface Enhancement - 
+   * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/interfaces]
    * **Default Methods** :
       * Interface can have implementation of methods declared as default.
       * If interface needs to be extended without breaking classes implementing it, default methods is good option.
@@ -8,6 +9,7 @@
       * Interface can have static methods. It can be called directly: MyInterface.aMethod()
 ## 2. Lambda Expression
 ## 3. Streams:
+   * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
    * Operates on a data source - Arrays or Collection.
    * Performs operation on data source such as sort, filter, iteration and others.
    * It doesn't modify the main datasource. Terminal result of a stream is - Another stream or a result(count, min, max)
