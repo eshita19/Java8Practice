@@ -5,12 +5,14 @@
    * **Default Methods** :
       * If interface needs to be extended without breaking classes implementing it, default methods is good option.
       * Interface can have implementation of methods declared as default.
-      ```interface Moveable {
+      ```
+      interface Moveable {
           void moveLeft();
           default void moveRight(){
             System.out.println("This is default implementation")
           }
-       } ``` 
+       }
+       ``` 
      
    * **Static Methods** :
       * Interface can have static methods. It can be called directly: MyInterface.aMethod()
