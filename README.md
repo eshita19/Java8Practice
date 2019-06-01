@@ -22,10 +22,13 @@
         static void clear(){ };
       }
       ```
-      
-## 2. Lambda Expression
+## 2. Optional
 
-## 3. Streams:
+## 3. SplitIterator
+
+## 4. Lambda Expression
+
+## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
    * Operates on a data source - Arrays or Collection.
    * Performs operation on data source such as sort, filter, iteration and others.
