@@ -23,8 +23,11 @@
       }
       ```
 ## 2. Optional
-   * Better way to handle Null pointer exceptions and avoid null checks.
-   * It is a wrapper object of a value using which Optional object is constructed.
+   * Better way to handle Null pointer exceptions and avoid null checks resulting in neat code.
+   * It is a wrapper object of a value(may or may not be null).
+   
+   
+   * *Advantage*: Reduces code complexity added due to if blocks doing null checks and also sometimes null assigment(`if(str = null`)
    
 
 ## 3. SplitIterator
