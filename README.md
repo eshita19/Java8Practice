@@ -3,17 +3,20 @@
 ## 1. Interface Enhancement - 
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/interfaces]
    * **Default Methods** :
+      * If interface needs to be extended without breaking classes implementing it, default methods is good option.
       * Interface can have implementation of methods declared as default.
       ```interface Moveable {
           void moveLeft();
           default void moveRight(){
             System.out.println("This is default implementation")
           }
-       }``` 
-      * If interface needs to be extended without breaking classes implementing it, default methods is good option.
+       } ``` 
+     
    * **Static Methods** :
       * Interface can have static methods. It can be called directly: MyInterface.aMethod()
+      
 ## 2. Lambda Expression
+
 ## 3. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
    * Operates on a data source - Arrays or Collection.
