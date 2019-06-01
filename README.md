@@ -4,12 +4,12 @@
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/interfaces]
    * **Default Methods** :
       * Interface can have implementation of methods declared as default.
-      `interface Moveable {
+      ```interface Moveable {
           void moveLeft();
           default void moveRight(){
             System.out.println("This is default implementation")
           }
-       }`
+       }```
       * If interface needs to be extended without breaking classes implementing it, default methods is good option.
    * **Static Methods** :
       * Interface can have static methods. It can be called directly: MyInterface.aMethod()
@@ -51,8 +51,8 @@
 
    * **Terminal operation vs intermediate operations** : Terminal operations consumes stream and produces a result(count, sorted, toArray). Intermediate operations consumes a stream and produces a new stream(filter, map, reduce)
    * **Reduction operations**: These operations reduces the stream data to a single value(count, min, max) 
-      Optional<T> reduce(BinaryOperator<T> accumlator)
-      T reduce(T identityVal, BinaryOperator<T> accumlator)
+     ``` Optional<T> reduce(BinaryOperator<T> accumlator)
+      T reduce(T identityVal, BinaryOperator<T> accumlator)```
    * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
