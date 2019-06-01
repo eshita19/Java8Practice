@@ -9,7 +9,7 @@
           default void moveRight(){
             System.out.println("This is default implementation")
           }
-       }```
+       }``` 
       * If interface needs to be extended without breaking classes implementing it, default methods is good option.
    * **Static Methods** :
       * Interface can have static methods. It can be called directly: MyInterface.aMethod()
