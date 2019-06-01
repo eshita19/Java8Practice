@@ -3,8 +3,8 @@
 ## 1. Interface Enhancement - 
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/interfaces]
    * **Default Methods** :
-      * If interface needs to be extended without breaking classes implementing it, default methods is good option.
       * Interface can have implementation of methods declared as default.
+      * *Advantage*: If interface needs to be extended without breaking classes implementing it, default methods is good option.
       ```
       interface Moveable {
           void moveLeft();
@@ -13,9 +13,15 @@
           }
        }
        ``` 
-     
    * **Static Methods** :
-      * Interface can have static methods. It can be called directly: MyInterface.aMethod()
+     * Interface can have static methods. It can be only called through: MyInterface.aMethod().
+     * *Advantage*: No need to create a class containing only utility methods and no state. Interface can have all utility methods. Interface static methods cannot be overriden as they are visible only through interface reference.
+      ```
+      interface MyUtil{
+        static void isEmpty(){ };
+        static void clear(){ };
+      }
+      ```
       
 ## 2. Lambda Expression
 
