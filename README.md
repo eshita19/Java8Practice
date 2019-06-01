@@ -23,6 +23,9 @@
       }
       ```
 ## 2. Optional
+   * Better way to handle Null pointer exceptions and avoid null checks.
+   * It is a wrapper object of a value using which Optional object is constructed.
+   
 
 ## 3. SplitIterator
 
