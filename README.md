@@ -25,10 +25,16 @@
 ## 2. Optional
    * Better way to handle Null pointer exceptions and avoid null checks resulting in neat code.
    * It is a wrapper object of a value(may or may not be null).
-   
-   
-   * *Advantage*: Reduces code complexity added due to if blocks doing null checks and also sometimes null assigment(`if(str = null`)
-   
+     ```
+	    Optional<String> str2 = transform("java 8");
+		  op = str2.orElse("default"); //If the transformed String is not null get it otherwise "default" string
+		  System.out.println(op);
+      
+      if(str3.filter(str -> !str.equals("java8")).isPresent()){
+	    	System.out.println("It is not equal to java 8");
+	    }
+     ```
+   * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
 
 ## 3. SplitIterator
 
