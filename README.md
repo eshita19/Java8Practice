@@ -27,10 +27,10 @@
    * It is a wrapper object of a value(may or may not be null).
      ```
 	    Optional<String> str2 = transform("java 8");
-		  op = str2.orElse("default"); //If the transformed String is not null get it otherwise "default" string
-		  System.out.println(op);
+	    op = str2.orElse("default"); //If the transformed String is not null get it otherwise "default" string
+            System.out.println(op);
       
-      if(str3.filter(str -> !str.equals("java8")).isPresent()){
+            if(str3.filter(str -> !str.equals("java8")).isPresent()){
 	    	System.out.println("It is not equal to java 8");
 	    }
      ```
