@@ -38,7 +38,7 @@
    * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
 
 ## 3. SplitIterator
-     ```
+      ```
         //Traditional iterator with two calls hasnext and next
 		Iterator<Integer> numsIterator = nums.iterator();
 		System.out.println("Printing nums from traditional Iterator");
@@ -58,7 +58,7 @@
 		
 		//forEachRemaining : Iterates through remaining elements. No hasNext and next call.
 		secondSplit.forEachRemaining(System.out::println);
-      ```
+       ```
 
 ## 4. Lambda Expression
 
