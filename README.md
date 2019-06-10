@@ -114,11 +114,11 @@
 			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
 		}	
 	   ```
-      * **Method references**:
-	* Static method reference : `className::methodName`
-	* instance method reference :`objectName::methodName`
+       * **Method references**:
+	  * Static method reference : `className::methodName`
+	  * instance method reference :`objectName::methodName`
 	
-      * **Constructor reference**: `className::new`
+       * **Constructor reference**: `className::new`
           
         
      
