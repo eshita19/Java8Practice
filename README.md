@@ -92,19 +92,27 @@
       1. Has only a single abstract method(Excluding java.lang.object methods)
       2. Create instance of Functional interface using -
       	 * **Lamda Expressions**:
-	 ```
-			interface Operation{
-			   int calculate(int a, int b);
+	   ```
+	   		public static void main(String[] args) {
+			List<Student> students = new ArrayList<Student>();
+			for(int i =0; i<5; i++){
+				students.add(new Student(i, "name" + i));
 			}
 
-			Operation sum = (a,b) -> a+b; //At run-time new Operation{ int calculate(int a , int b){ return a+b;}}
-			Operation division = (a,b) -> a/b;
-			Operation complex = (a,b) -> {
-				a = a+b;
-				b = b-a;
-				return a*b;
-		      };
-	```
+			//Comparator Anonymous class - Sort by name Desc order
+			Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
+				@Override
+				public int compare(Student o1, Student o2) {
+					return o2.getName().compareTo(o1.getName());
+				}
+			};
+
+			Collections.sort(students, studentByNameDesOrder);
+			for(Student stud : students){
+				System.out.println(stud.getName());
+			}
+		}	
+	   ```
       * **Method references**:
 	   - 
 	
