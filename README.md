@@ -107,17 +107,21 @@
 				}
 			};
 
+			//Using Traditional approach
 			Collections.sort(students, studentByNameDesOrder);
-			for(Student stud : students){
-				System.out.println(stud.getName());
-			}
+			
+			//Using Lamda
+			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
 		}	
 	   ```
       * **Method references**:
-	   - 
+	 Static method reference : `className::methodName`
+	 instance method reference :`objectName::methodName`
 	
-         3.**Constructor reference**
-      
+      * **Constructor reference**: `className::new`
+          
+        
+     
 
 ## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
