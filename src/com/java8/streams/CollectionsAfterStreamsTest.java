@@ -31,7 +31,7 @@ public class CollectionsAfterStreamsTest {
 		
 		//Sort elements
 		System.out.println("Sorting elements");
-		nums.stream().sorted().forEach(num -> System.out.println(num));
+		nums.stream().sorted(Integer::compare).forEach(num -> System.out.println(num));
 		
 		//Get product of elements - reduce function
 		System.out.println("Product of all elements");

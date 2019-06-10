@@ -8,15 +8,21 @@ interface Moveable {
 	default public void moveTop() {
 		System.out.println("Default Move top");
 	}
+	
+	static void moveBottom(){
+		System.out.println("Static Move bottom");
+	}
 }
 
 public class TestAfterDefaultInterface {
 	public static void main(String[] args) {
 		A1 a = new A1();
-		a.moveTop();
+		a.moveTop();  // Calls default method
 		
 		B1 b = new B1();
-		b.moveTop();
+		b.moveTop(); // Calls overridden default method
+		
+		Moveable.moveBottom(); //Static utility method in interface
 	}
 }
 
