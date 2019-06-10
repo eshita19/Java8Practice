@@ -38,6 +38,7 @@
    * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
 
 ## 3. SplitIterator
+      * Code Link [https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/splititerator]
       ```
         //Traditional iterator with two calls hasnext and next
 		Iterator<Integer> numsIterator = nums.iterator();
