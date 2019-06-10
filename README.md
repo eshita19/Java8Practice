@@ -90,18 +90,24 @@
    ```
    *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
-      2. Create instance of FI using:
-         1. Lamda Expressions
-	    ```
+      2. Create instance of Functional interface using:
+        - **Lamda Expressions**
+	  ```
 	 	interface Operation{
 		   int calculate(int a, int b);
 		}
 		
 		Operation sum = (a,b) -> a+b; //At run-time new Operation{ int calculate(int a , int b){ return a+b;}}
-		Operation division = (a,b) -> a-b;
-	    ```
-	 2. Method references
-	 3. Constructor reference
+		Operation division = (a,b) -> a/b;
+		Operation complex = (a,b) -> {
+			a = a+b;
+			b = b-a;
+			return a*b;
+	      };
+	   ```
+	-  **Method references**
+	
+        - **Constructor reference**
       
 
 ## 5. Streams:
