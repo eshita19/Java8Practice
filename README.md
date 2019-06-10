@@ -1,9 +1,69 @@
 # Java8 Features
 
-## 1. Interface Enhancement
-    * **Default Methods** : Interface can have implementation of methods declared as default. If interface needs to be extended without breaking classes implementing it, default methods is good option.
-## 2. Lambda Expression
-## 3. Streams:
+## 1. Interface Enhancement - 
+   * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/interfaces]
+   * **Default Methods** :
+      * Interface can have implementation of methods declared as default.
+      * *Advantage*: If interface needs to be extended without breaking classes implementing it, default methods is good option.
+      ```
+      interface Moveable {
+          void moveLeft();
+          default void moveRight(){
+            System.out.println("This is default implementation")
+          }
+       }
+       ``` 
+   * **Static Methods** :
+     * Interface can have static methods. It can be only called through: MyInterface.aMethod().
+     * *Advantage*: No need to create a class containing only utility methods and no state. Interface can have all utility methods. Interface static methods cannot be overriden as they are visible only through interface reference.
+      ```
+      interface MyUtil{
+        static void isEmpty(){ };
+        static void clear(){ };
+      }
+      ```
+## 2. Optional
+   * Better way to handle Null pointer exceptions and avoid null checks resulting in neat code.
+   * It is a wrapper object of a value(may or may not be null).
+     ```
+     Optional<String> str2 = Optional.ofNullable("eshita")
+     op = str2.orElse("default"); //If the transformed String is not null get it otherwise "default" string
+     System.out.println(op);
+      
+     Optional<String> str3 = Optional.ofNullable("java") 
+     if(str3.filter(str -> !str.equals("java8")).isPresent()){
+    	 System.out.println("It is not equal to java 8");
+     }
+     ```
+   * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
+
+## 3. SplitIterator
+     ```
+        //Traditional iterator with two calls hasnext and next
+		Iterator<Integer> numsIterator = nums.iterator();
+		System.out.println("Printing nums from traditional Iterator");
+		while(numsIterator.hasNext()){
+			System.out.println(numsIterator.next());
+		}
+		
+		//Split the list in two halfs
+		Spliterator<Integer> secondSplit = nums.spliterator(); // Contains elements [3,4]
+		Spliterator<Integer> firstSplit = secondSplit.trySplit(); // Contains elements [1,2]
+		
+		//tryAdvance: Iterates through remaining elements. Returns true if there are more elements to be iterated. No hasNext call.
+		while(secondSplit.tryAdvance(n -> {
+			n = n +1;
+			System.out.println(n);
+		}));
+		
+		//forEachRemaining : Iterates through remaining elements. No hasNext and next call.
+		secondSplit.forEachRemaining(System.out::println);
+      ```
+
+## 4. Lambda Expression
+
+## 5. Streams:
+   * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
    * Operates on a data source - Arrays or Collection.
    * Performs operation on data source such as sort, filter, iteration and others.
    * It doesn't modify the main datasource. Terminal result of a stream is - Another stream or a result(count, min, max)
@@ -39,8 +99,8 @@
 
    * **Terminal operation vs intermediate operations** : Terminal operations consumes stream and produces a result(count, sorted, toArray). Intermediate operations consumes a stream and produces a new stream(filter, map, reduce)
    * **Reduction operations**: These operations reduces the stream data to a single value(count, min, max) 
-      Optional<T> reduce(BinaryOperator<T> accumlator)
-      T reduce(T identityVal, BinaryOperator<T> accumlator)
+     ``` Optional<T> reduce(BinaryOperator<T> accumlator)
+      T reduce(T identityVal, BinaryOperator<T> accumlator)```
    * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
