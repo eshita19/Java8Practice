@@ -23,6 +23,7 @@
       }
       ```
 ## 2. Optional
+   * Code link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/optional]:
    * Better way to handle Null pointer exceptions and avoid null checks resulting in neat code.
    * It is a wrapper object of a value(may or may not be null).
      ```
