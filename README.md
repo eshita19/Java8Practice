@@ -115,8 +115,8 @@
 		}	
 	   ```
       * **Method references**:
-	 Static method reference : `className::methodName`
-	 instance method reference :`objectName::methodName`
+	* Static method reference : `className::methodName`
+	* instance method reference :`objectName::methodName`
 	
       * **Constructor reference**: `className::new`
           
