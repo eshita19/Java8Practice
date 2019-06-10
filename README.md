@@ -39,6 +39,7 @@
 
 ## 3. SplitIterator
    * Code Link [https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/splititerator]
+   * Useful for parallel processing of large set of elements.
      ```
         //Traditional iterator with two calls hasnext and next
 		Iterator<Integer> numsIterator = nums.iterator();
