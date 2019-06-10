@@ -38,8 +38,8 @@
    * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
 
 ## 3. SplitIterator
-      ```
-    //Traditional iterator with two calls hasnext and next
+     ```
+        //Traditional iterator with two calls hasnext and next
 		Iterator<Integer> numsIterator = nums.iterator();
 		System.out.println("Printing nums from traditional Iterator");
 		while(numsIterator.hasNext()){
