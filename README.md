@@ -63,7 +63,7 @@
 		secondSplit.forEachRemaining(System.out::println);
        ```
 
-## 4. Lambda Expression
+## 4. Lambda Expression, Method references and Constructor reference
    * Reduces number of lines of code at places where we need to just use a function instead of an object having state.
    * Example
    ```
@@ -88,6 +88,21 @@
 		//Lambda expression
 		Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
    ```
+   *  **Functional interface**:
+      1. Has only a single abstract method(Excluding java.lang.object methods)
+      2. Create instance of FI using:
+         1. Lamda Expressions
+	    ```
+	 	interface Operation{
+		   int calculate(int a, int b);
+		}
+		
+		Operation sum = (a,b) -> a+b; //At run-time new Operation{ int calculate(int a , int b){ return a+b;}}
+		Operation division = (a,b) -> a-b;
+	   ```
+	 2. Method references
+	 3. Constructor reference
+      
 
 ## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
