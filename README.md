@@ -64,6 +64,30 @@
        ```
 
 ## 4. Lambda Expression
+   * Reduces number of lines of code at places where we need to just use a function instead of an object having state.
+   * Example
+   ```
+  	       List<Student> students = new ArrayList<Student>();
+		for(int i =0; i<5; i++){
+			students.add(new Student(i, "name" + i));
+		}
+		
+		//Comparator Anonymous class - Sort by name Desc order
+		Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o2.getName().compareTo(o1.getName());
+			}
+		};
+		
+		Collections.sort(students, studentByNameDesOrder);
+		for(Student stud : students){
+			System.out.println(stud.getName());
+		}
+		
+		//Lambda expression
+		Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
+   ```
 
 ## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
