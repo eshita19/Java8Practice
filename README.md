@@ -91,7 +91,7 @@
    *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
       2. Create instance of Functional interface using:
-        - **Lamda Expressions**
+         1.**Lamda Expressions**
 	  ```
 	 	interface Operation{
 		   int calculate(int a, int b);
@@ -105,9 +105,10 @@
 			return a*b;
 	      };
 	   ```
-	-  **Method references**
+	 2.**Method references**:
+	   - 
 	
-        - **Constructor reference**
+         3.**Constructor reference**
       
 
 ## 5. Streams:
