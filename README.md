@@ -99,7 +99,7 @@
 		
 		Operation sum = (a,b) -> a+b; //At run-time new Operation{ int calculate(int a , int b){ return a+b;}}
 		Operation division = (a,b) -> a-b;
-	   ```
+	    ```
 	 2. Method references
 	 3. Constructor reference
       
