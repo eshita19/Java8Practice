@@ -88,7 +88,7 @@
 		//Lambda expression
 		Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
    ```
-     *  **Functional interface**:
+   *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
       2. Create instance of Functional interface using:
          * **Lamda Expressions**:
