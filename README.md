@@ -23,6 +23,7 @@
       }
       ```
 ## 2. Optional
+   * Code link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/optional]:
    * Better way to handle Null pointer exceptions and avoid null checks resulting in neat code.
    * It is a wrapper object of a value(may or may not be null).
      ```
@@ -38,6 +39,8 @@
    * *Advantage*: Reduces code complexity added due to if blocks doing null checks.
 
 ## 3. SplitIterator
+   * Code Link [https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/splititerator]
+   * Useful for parallel processing of large set of elements.
      ```
         //Traditional iterator with two calls hasnext and next
 		Iterator<Integer> numsIterator = nums.iterator();
@@ -58,9 +61,78 @@
 		
 		//forEachRemaining : Iterates through remaining elements. No hasNext and next call.
 		secondSplit.forEachRemaining(System.out::println);
-      ```
+       ```
 
-## 4. Lambda Expression
+## 4. Lambda Expression, Method references and Constructor reference
+   * Reduces number of lines of code at places where we need to just use a function instead of an object having state.
+   * Example
+   ```
+  	       List<Student> students = new ArrayList<Student>();
+		for(int i =0; i<5; i++){
+			students.add(new Student(i, "name" + i));
+		}
+		
+		//Comparator Anonymous class - Sort by name Desc order
+		Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
+			@Override
+			public int compare(Student o1, Student o2) {
+				return o2.getName().compareTo(o1.getName());
+			}
+		};
+		
+		Collections.sort(students, studentByNameDesOrder);
+		for(Student stud : students){
+			System.out.println(stud.getName());
+		}
+		
+		//Lambda expression
+		Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
+   ```
+   *  **Functional interface**:
+      1. Has only a single abstract method(Excluding java.lang.object methods)
+      2. Create instance of Functional interface using:
+         * **Lamda Expressions**:
+	        ```
+            	  public static void main(String[] args) {
+            			List<Student> students = new ArrayList<Student>();
+            			for(int i =0; i<5; i++){
+            				students.add(new Student(i, "name" + i));
+            			}
+            
+            			//Comparator Anonymous class - Sort by name Desc order
+            			Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
+            				@Override
+            				public int compare(Student o1, Student o2) {
+            					return o2.getName().compareTo(o1.getName());
+            				}
+            			};
+
+            			//Using Traditional approach
+            			Collections.sort(students, studentByNameDesOrder);
+            			
+            			//Using Lamda
+            			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
+	        	}	
+        	```
+         * **Method references**:
+             * **Static method reference** : `className::methodName`
+             * **Instance method reference** :`objectName::methodName`
+             * **Constructor reference**: `className::new`
+             ```
+             interface StudentFactory{
+            	Student getStudent(int rollNum, String name);
+            }
+            
+            public class TestConstructorReference {
+            	public static void main(String[] args) {
+            		StudentFactory studentFactory = Student::new;
+            		Student student = studentFactory.getStudent(123, "Hello");
+            	}
+            }
+            ```
+          
+        
+     
 
 ## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
