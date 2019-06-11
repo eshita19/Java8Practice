@@ -17,7 +17,7 @@ class B2 extends A2 implements Displayable{
 	}
 }
 
-public class StaticMethodInClass {
+public class StaticMethodInInterface {
 	public static void main(String[] args) {
 		B2.print(); //It will call B2's print utility instead of A2 (Overriden main utility A2's functionality!
 		A2.print(); // A2's print
