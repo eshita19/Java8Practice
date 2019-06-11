@@ -90,35 +90,34 @@
    ```
    *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
-      2. Create instance of Functional interface using -
-      * **Lamda Expressions**:
-	```
-	   		public static void main(String[] args) {
-			List<Student> students = new ArrayList<Student>();
-			for(int i =0; i<5; i++){
-				students.add(new Student(i, "name" + i));
-			}
+      2. Create instance of Functional interface using:
+         * **Lamda Expressions**:
+	        ```
+            	   		public static void main(String[] args) {
+            			List<Student> students = new ArrayList<Student>();
+            			for(int i =0; i<5; i++){
+            				students.add(new Student(i, "name" + i));
+            			}
+            
+            			//Comparator Anonymous class - Sort by name Desc order
+            			Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
+            				@Override
+            				public int compare(Student o1, Student o2) {
+            					return o2.getName().compareTo(o1.getName());
+            				}
+            			};
 
-			//Comparator Anonymous class - Sort by name Desc order
-			Comparator<Student> studentByNameDesOrder = new Comparator<Student>() {
-				@Override
-				public int compare(Student o1, Student o2) {
-					return o2.getName().compareTo(o1.getName());
-				}
-			};
-
-			//Using Traditional approach
-			Collections.sort(students, studentByNameDesOrder);
-			
-			//Using Lamda
-			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
-		}	
-	```
-     * **Method references**:
-       * Static method reference : `className::methodName`
-       * instance method reference :`objectName::methodName`
-	
-     * **Constructor reference**: `className::new`
+            			//Using Traditional approach
+            			Collections.sort(students, studentByNameDesOrder);
+            			
+            			//Using Lamda
+            			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
+	        	}	
+        	```
+         * **Method references**:
+             * **Static method reference** : `className::methodName`
+             * **Instance method reference** :`objectName::methodName`
+             * **Constructor reference**: `className::new`
           
         
      
