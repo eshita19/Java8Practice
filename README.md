@@ -137,6 +137,7 @@
 
 ## 5. Streams:
    * Code Link[https://github.com/eshita19/Java8Practice/tree/master/src/com/java8/streams]
+   * `nums.parallelStream().filter((Integer num) -> num % 2 == 0).forEach(num -> System.out.println(num));`
    * Operates on a data source - Arrays or Collection.
    * Performs operation on data source such as sort, filter, iteration and others.
    * It doesn't modify the main datasource. Terminal result of a stream is - Another stream or a result(count, min, max)
