@@ -91,8 +91,8 @@
    *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
       2. Create instance of Functional interface using -
-      	 * **Lamda Expressions**:
-	     ```
+      * **Lamda Expressions**:
+	```
 	   		public static void main(String[] args) {
 			List<Student> students = new ArrayList<Student>();
 			for(int i =0; i<5; i++){
@@ -113,12 +113,12 @@
 			//Using Lamda
 			Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
 		}	
-	     ```
-         * **Method references**:
-	     * Static method reference : `className::methodName`
-	     * instance method reference :`objectName::methodName`
+	```
+     * **Method references**:
+       * Static method reference : `className::methodName`
+       * instance method reference :`objectName::methodName`
 	
-         * **Constructor reference**: `className::new`
+     * **Constructor reference**: `className::new`
           
         
      
