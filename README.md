@@ -88,12 +88,12 @@
 		//Lambda expression
 		Collections.sort(students, (s1,s2) -> s1.getName().compareTo(s2.getName()));
    ```
-   *  **Functional interface**:
+     *  **Functional interface**:
       1. Has only a single abstract method(Excluding java.lang.object methods)
       2. Create instance of Functional interface using:
          * **Lamda Expressions**:
 	        ```
-            	   		public static void main(String[] args) {
+            	  public static void main(String[] args) {
             			List<Student> students = new ArrayList<Student>();
             			for(int i =0; i<5; i++){
             				students.add(new Student(i, "name" + i));
@@ -118,6 +118,18 @@
              * **Static method reference** : `className::methodName`
              * **Instance method reference** :`objectName::methodName`
              * **Constructor reference**: `className::new`
+             ```
+             interface StudentFactory{
+            	Student getStudent(int rollNum, String name);
+            }
+            
+            public class TestConstructorReference {
+            	public static void main(String[] args) {
+            		StudentFactory studentFactory = Student::new;
+            		Student student = studentFactory.getStudent(123, "Hello");
+            	}
+            }
+            ```
           
         
      
