@@ -178,6 +178,8 @@
    * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
-          
+-  Utility methods for using lamda: 
+   - Derive comparator based on a field in object: ```Comparator.comparing(Apple::getWeight))```
+	   
      
    
