@@ -192,7 +192,7 @@
     - Chain predicates -
       ```
         Predicate<Apple> redAndHeavyAppleOrGreen =
-    redApple.and(apple -> apple.getWeight() > 150)
+        redApple.and(apple -> apple.getWeight() > 150)
             .or(apple -> GREEN.equals(a.getColor()));
       ```
      
