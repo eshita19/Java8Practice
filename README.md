@@ -180,6 +180,10 @@
   
 -  Utility methods for using lamda: 
    - Derive comparator based on a field in object: ```Comparator.comparing(Apple::getWeight))```
-	   
+   - ```
+     inventory.sort(comparing(Apple::getWeight)
+         .reversed()                                  
+         .thenComparing(Apple::getCountry));          
+     ```	   
      
    
