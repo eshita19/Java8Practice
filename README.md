@@ -178,7 +178,7 @@
    * **Collectors operations** : Convert stream to Collection. (Collectors.toList & Collectors.toSet)
   
   
--  Utility methods for using lamda: 
+-  Utility methods for using lamda composite operations: 
    - **Comparators**: 
 	 - Derive comparator based on a field in object: ```Comparator.comparing(Apple::getWeight))```
   	 - 
@@ -195,5 +195,8 @@
         redApple.and(apple -> apple.getWeight() > 150)
             .or(apple -> GREEN.equals(a.getColor()));
       ```
+  - **Function**
+    - ```andThen()```
+    - ```compose()```
      
    
