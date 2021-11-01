@@ -181,7 +181,8 @@
 -  Utility methods for using lamda: 
    - **Comparators**: 
 	 - Derive comparator based on a field in object: ```Comparator.comparing(Apple::getWeight))```
-  	 - ```
+  	 - 
+    ```
      inventory.sort(comparing(Apple::getWeight)
          .reversed()                                  
          .thenComparing(Apple::getCountry));          
