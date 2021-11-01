@@ -186,6 +186,14 @@
      inventory.sort(comparing(Apple::getWeight)
          .reversed()                                  
          .thenComparing(Apple::getCountry));          
-     ```	   
+     ```	
+  - **Predicate**:
+    - negate method - ```Predicate<Apple> notRedApple = redApple.negate(); ```
+    - Chain predicates -
+      ```
+        Predicate<Apple> redAndHeavyAppleOrGreen =
+    redApple.and(apple -> apple.getWeight() > 150)
+            .or(apple -> GREEN.equals(a.getColor()));
+      ```
      
    
